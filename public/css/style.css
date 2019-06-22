@@ -1,0 +1,64 @@
+body {
+  background-image: url('/img/img3.jpg'); 
+  font-family: arial;
+  margin: 20px 30%;
+  padding: 0 16px;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.jumbotron {
+  background-color:rgb(199, 196, 191);
+  opacity: 0.85;
+}
+
+.data {
+  flex-grow: 1;
+  position: relative;
+}
+
+.title {
+  color: brown
+}
+.logo {
+  padding: 0 auto;
+  margin: 0 15%;
+  color: green;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.data {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-size: 21px;
+}
+.data p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 23px;
+}
+.data a {
+  color: #f308b8;
+  text-decoration: none;
+}
+
+.headposition {
+  flex-grow: 1;
+}
+.headposition a {
+  color: #f308b8;
+  margin-right: 16px;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 0 30%;
+}
+
+.footer {
+  border-top: 1px solid rgb(0, 225, 255);
+  margin-top: 10px;
+  padding: 15px 17%; 
+}
+.footer p {
+  color: red;
+}

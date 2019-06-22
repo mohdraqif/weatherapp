@@ -1,0 +1,15 @@
+<%include partials/header %>
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="headposition">
+  <h1 class="title">Welcome To WeatherApp</h1><br>
+  <h5 class="logo">Where Weather Comes To You</h5><br>
+  <a href="/entry">Entry</a>
+</div>
+
+<div class="data">
+  <p><%= location %> , <%= latitude %> , <%= longitude %><br> It Will Be <%= summary %><br> With <%= humidity %> % Chances Of Rainfall And <%= humidity %> Humidity Content , the Cloud Cover is <%= clouds %> .<br><br>
+    <a href="/entry">Try Another Search</a>
+</div>
+
+<% include partials/footer %>
