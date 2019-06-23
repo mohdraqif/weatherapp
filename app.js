@@ -28,7 +28,7 @@ app.get('/weather', (req, res) =>{                                    //////////
       if(error) {                                                     //    Latitude: latitude of delhi  //
         return res.send('NOT CONNECTED!!!')                           //    Longitude:latitude of delhi  //
       }                                                               //    Location: location of delhi  //
-        // console.log(data)                                          //                                 //
+        console.log(data)                                          //                                 //
         res.send(data)                                                //   to blank url /weather         //
       })                                                              /////////////////////////////////////
     }
@@ -42,7 +42,7 @@ app.post('/weather', (req, res) =>{
         // console.log(data.longitude,data.latitude,data.location)
          
             forecast(data.latitude,data.longitude, (error, data) =>{
-              // console.log(data);
+              console.log(data);
 
           return res.render('weather', {
             longitude: data.longitude, latitude: data.latitude,
