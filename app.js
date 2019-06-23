@@ -37,7 +37,7 @@ app.get('/weather', (req, res) =>{                                    //////////
 app.post('/weather', (req, res) =>{
   var loc = req.body.location
   var location = loc.toUpperCase();
-    fetch('http://localhost:3000/weather?address='+ location).then((response) =>{
+    fetch('/weather?address='+ location).then((response) =>{
       response.json().then((data) =>{
         // console.log(data.longitude,data.latitude,data.location)
          
