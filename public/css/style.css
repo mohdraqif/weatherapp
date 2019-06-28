@@ -1,7 +1,7 @@
 body {
   background: url('/img/img3.jpg') no-repeat center center fixed; 
   font-family: arial;
-  margin: auto;
+  margin: 20px auto;
   padding: 0 16px;
   max-width: 650px;
   -webkit-background-size: cover;
