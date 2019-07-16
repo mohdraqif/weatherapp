@@ -1,11 +1,13 @@
+// FULLY WORKING WEATHERAPP
+
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000 
 const path = require('path')
 const fetch = require('node-fetch')
 const bodyParser = require('body-parser')
 const geocode = require('./utils/geocode.js')
 const forecast = require('./utils/forecast.js')
+const port = 3000 
 
 app.set('view engine','ejs')
 app.use(bodyParser.urlencoded({extended: true}))
@@ -26,7 +28,7 @@ app.get('/weather', (req, res) =>{                                    //////////
   } else {                                                            //                                 //
     geocode(req.query.address, (error, data) =>{                      //  Returns:                       //
       if(error) {                                                     //    Latitude: latitude of delhi  //
-        return res.send('NOT CONNECTED!!!')                           //    Longitude:latitude of delhi  //
+        return res.send('Invalid Location!!!')                           //    Longitude:latitude of delhi  //
       }                                                               //    Location: location of delhi  //
         // console.log(data)                                          //                                 //
         res.send(data)                                                //   to blank url /weather         //
@@ -43,7 +45,6 @@ app.post('/weather', (req, res) =>{
          
             forecast(data.latitude,data.longitude, (error, data) =>{
               // console.log(data);
-
           return res.render('weather', {
             longitude: data.longitude, latitude: data.latitude,
             summary: data.summary, humidity: data.humidity,
